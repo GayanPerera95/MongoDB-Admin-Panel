@@ -15,7 +15,7 @@ jobs:
 
   steps:
     -name: Checkout
-     uses: actions/checkout@v1
+     uses: actions/heroku@1.0.0
 
     -name: Install and build
      working-directory: ./crud_app
