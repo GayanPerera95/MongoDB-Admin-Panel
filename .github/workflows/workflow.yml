@@ -1,0 +1,25 @@
+name: Github Pages Deploy
+
+on:
+  push:
+    branches:
+      - "deployment-gayan"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+  strategy:
+    mateix:
+      node-version: [14.17]
+
+  steps:
+    -name: Checkout
+     uses: actions/checkout@v1
+
+    -name: Install and build
+     working-directory: ./crud_app
+     run: npm install
+
+    -name: Deploy
+     
